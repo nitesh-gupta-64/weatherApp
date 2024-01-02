@@ -13,92 +13,151 @@
 </head>
 <body>
     
-    <div class="wrapper w-screen h-screen text-[#F9F7F7] overflow-x-hidden overflow-y-auto">
+    <div class="wrapper w-screen h-screen text-[#F9F7F7] overflow-x-hidden overflow-y-auto relative">
 
-        <!-- bg-gradient-to-br from-[#112d4e] to-[#3f72af] -->
 
-        <h1 class="text-center uppercase pt-6 tracking-wide">Weather App</h1>
+        <div class="cont">
 
-        <div class="tab-container flex justify-between w-[90%] max-w-[550px] my-0 mx-auto mt-16">
-            <p class="tab cursor-pointer text-[0.875rem] py-[5px] px-[8px] tracking-[1.75px] rounded-[4px]" data-userWeather>Your Weather</p>
-            <p class="tab cursor-pointer text-[0.875rem] py-[5px] px-[8px] tracking-[1.75px] rounded-[4px]" data-searchWeather>Search Weather</p>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+    
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                  </filter>
+                </defs>
+            </svg>
+    
         </div>
 
-        <div class="weather-container my-16"></div>
-            <!-- grant location container -->
-            <div class="sub-container grant-location-container flex flex-col items-center">
-                <img class="mb-8" src="./images/location.png" width="80" height="80" loading="lazy">
-                <p class="text-[1.75rem] font-semibold">Grant Location Access</p>
-                <p class="text-[0.85rem] font-medium mt-3 mb-7 tracking-[0.75px]">Allow Access to get weather Information</p>
-                <button class="btn text-[0.85rem] uppercase rounded-[5px] bg-[#3F72AF] cursor-pointer py-[10px] px-[30px] mb-[10px] appearance-none border-none text-white" data-grantAccess>Grant Access</button>
+
+        <div class="container absolute z-10">
+
+            <h1 class="text-center uppercase pt-6 mt-4 tracking-wider">Weather App</h1>
+
+            <div class="tab-container flex justify-between w-[90%] max-w-[550px] my-0 mx-auto mt-16">
+                <p class="tab cursor-pointer text-[0.875rem] py-[5px] px-[8px] tracking-[1.75px] rounded-[4px]" data-userWeather>Your Weather</p>
+                <p class="tab cursor-pointer text-[0.875rem] py-[5px] px-[8px] tracking-[1.75px] rounded-[4px]" data-searchWeather>Search Weather</p>
             </div>
-
-            <!-- search form -> form-container-->
-            <form class="form-container hidden w-[90%] max-w-[550px] mx-auto justify-center items-center gap-x-[10px] mb-12" data-searchForm>
-                <input class="border-none w-full h-[40px] px-[20px] bg-[#dbe2ef80] rounded-[10px] placeholder:text-[#ffffffb3] focus:outline focus:outline-[3px] focus:outline-[#ffffffb3] placeholder:text-[15px] text-[#ffffffb3]" placeholder="Search for City..." type="text" data-searchInput>
-                <button class="btn p-0 w-[40px] h-[40px] flex items-center justify-center rounded-full mb-[1px] appearance-none border-none bg-[#3F72AF]" type="submit">
-                    <img src="./images/search.png"  width="20" height="20" loading="lazy">
-                </button>
-            </form>
-
-            <!--- loading screen container -->
-            <div class="sub-container loading-container flex flex-col items-center">
-                <img src="./images/loading.gif" width="150" height="150">
-                <p class="uppercase">Loading</p>
-            </div>
-
-            <!-- show weather info -->
-            <div class="sub-container user-info-container flex flex-col items-center">
-
-                <!--city name and Flag-->
-                <div class="name flex items-center gap-x-2 mb-4">
-                    <p class="text-[2rem] font-light" data-cityName></p>
-                    <img class="w-[30px] h-[30px] object-contain" data-countryIcon>
+    
+            <div class="weather-container my-16"></div>
+                <!-- grant location container -->
+                <div class="sub-container grant-location-container flex flex-col items-center">
+                    <img class="mb-8" src="./images/location.png" width="80" height="80" loading="lazy">
+                    <p class="text-[1.75rem] font-semibold">Grant Location Access</p>
+                    <p class="text-[0.85rem] font-medium mt-3 mb-7 tracking-[0.75px]">Allow Access to get weather Information</p>
+                    <button class="btn text-[0.85rem] uppercase rounded-[5px] bg-[#3F72AF] cursor-pointer py-[10px] px-[30px] mb-[10px] appearance-none border-none text-white" data-grantAccess>Grant Access</button>
                 </div>
-
-                <!-- weather description-->
-                <p class="text-[1.5rem] font-extralight" data-weatherDesc></p>
-                <!--weather Icon-->
-                <img class="w-[90px] h-[90px]" data-weatherIcon>
-                <!--temperature-->
-                <p class="text-[2.75rem] font-bold" data-temp></p>
-
-                <!--3 cards - parameters-->
-                <div class="parameter-container flex items-center justify-center mt-8 gap-y-[10px] gap-x-[20px] w-[90%] flex-wrap">
-
-                    <!--card 1-->
-                    <div class="parameter w-[90%] max-w-[200px] bg-[#dbe2ef80] rounded-[5px] p-4 flex flex-col gap-y-[5px] items-center">
-                        <img class="w-[50px] h-[50px]" src="./images/wind.png" >
-                        <p class="text-[1.3rem] font-light uppercase">windspeed</p>
-                        <p class="text-[1.5rem] font-extralight" data-windspeed></p>
-                    </div>
-
-                    <!--card 2-->
-                    <div class="parameter w-[90%] max-w-[200px] bg-[#dbe2ef80] rounded-[5px] p-4 flex flex-col gap-y-[5px] items-center">
-                        <img class="w-[50px] h-[50px]" src="./images/humidity.png" >
-                        <p class="text-[1.3rem] font-light uppercase">humidity</p>
-                        <p class="text-[1.5rem] font-extralight" data-humidity></p>
-                    </div>
-
-                    <!--card 3-->
-                    <div class="parameter w-[90%] max-w-[200px] bg-[#dbe2ef80] rounded-[5px] p-4 flex flex-col gap-y-[5px] items-center">
-                        <img class="w-[50px] h-[50px]" src="./images/cloud.png" >
-                        <p class="text-[1.3rem] font-light uppercase">Clouds</p>
-                        <p class="text-[1.5rem] font-extralight" data-cloudiness></p>
-                    </div>
-
+    
+                <!-- search form -> form-container-->
+                <form class="form-container hidden w-[90%] max-w-[550px] mx-auto justify-center items-center gap-x-[10px] mb-12" data-searchForm>
+                    <input class="border-none w-full h-[40px] px-[20px] bg-[#dbe2ef80] rounded-[10px] placeholder:text-[#ffffffb3] focus:outline focus:outline-[3px] focus:outline-[#ffffffb3] placeholder:text-[15px] text-[#ffffffb3]" placeholder="Search for City..." type="text" data-searchInput>
+                    <button class="btn p-0 w-[40px] h-[40px] flex items-center justify-center rounded-full mb-[1px] appearance-none border-none bg-[#3F72AF]" type="submit">
+                        <img src="./images/search.png"  width="20" height="20" loading="lazy">
+                    </button>
+                </form>
+    
+                <!--- loading screen container -->
+                <div class="sub-container loading-container flex flex-col items-center">
+                    <img src="./images/loading.gif" width="150" height="150">
+                    <p class="uppercase">Loading</p>
                 </div>
-
+    
+                <!-- show weather info -->
+                <div class="sub-container user-info-container flex flex-col items-center">
+    
+                    <!--city name and Flag-->
+                    <div class="name flex items-center gap-x-2 mb-4">
+                        <p class="text-[2rem] font-light" data-cityName></p>
+                        <img class="w-[30px] h-[30px] object-contain" data-countryIcon>
+                    </div>
+    
+                    <!-- weather description-->
+                    <p class="text-[1.5rem] font-extralight" data-weatherDesc></p>
+                    <!--weather Icon-->
+                    <img class="w-[90px] h-[90px]" data-weatherIcon>
+                    <!--temperature-->
+                    <p class="text-[2.75rem] font-bold" data-temp></p>
+    
+                    <!--3 cards - parameters-->
+                    <div class="parameter-container flex items-center justify-center mt-8 gap-y-[10px] gap-x-[20px] w-[90%] flex-wrap">
+    
+                        <!--card 1-->
+                        <div class="parameter w-[90%] max-w-[200px] bg-[#dbe2ef80] rounded-[5px] p-4 flex flex-col gap-y-[5px] items-center">
+                            <img class="w-[50px] h-[50px]" src="./images/wind.png" >
+                            <p class="text-[1.3rem] font-light uppercase">windspeed</p>
+                            <p class="text-[1.5rem] font-extralight" data-windspeed></p>
+                        </div>
+    
+                        <!--card 2-->
+                        <div class="parameter w-[90%] max-w-[200px] bg-[#dbe2ef80] rounded-[5px] p-4 flex flex-col gap-y-[5px] items-center">
+                            <img class="w-[50px] h-[50px]" src="./images/humidity.png" >
+                            <p class="text-[1.3rem] font-light uppercase">humidity</p>
+                            <p class="text-[1.5rem] font-extralight" data-humidity></p>
+                        </div>
+    
+                        <!--card 3-->
+                        <div class="parameter w-[90%] max-w-[200px] bg-[#dbe2ef80] rounded-[5px] p-4 flex flex-col gap-y-[5px] items-center">
+                            <img class="w-[50px] h-[50px]" src="./images/cloud.png" >
+                            <p class="text-[1.3rem] font-light uppercase">Clouds</p>
+                            <p class="text-[1.5rem] font-extralight" data-cloudiness></p>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+                <div class="notFound flex-col justify-center items-center" not-Found>
+    
+                    <img src="/images/not-found.png" height="300" width="300" alt="">
+                    <p class="text-center">City Not Found</p>
+    
+                </div>
+    
+    
+    
             </div>
-
-            <div class="notFound flex-col justify-center items-center" not-Found>
-
-                <img src="/images/not-found.png" height="300" width="300" alt="">
-                <p class="text-center">City Not Found</p>
-
-            </div>
-
-
 
         </div>
 
