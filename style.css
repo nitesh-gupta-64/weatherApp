@@ -10,7 +10,7 @@
 }
 
 .wrapper {
-    background-image: linear-gradient(to bottom, #a2b6df 0%, #002244 5%, #002244 95%, #a2b6df 100%);
+    background-image: linear-gradient(to right, #a2b6df 0%, #002244 10%, #002244 90%, #a2b6df 100%);
 }
 
 .tab.current-tab{
@@ -69,6 +69,7 @@
     filter:url("#goo");
     scale: 5;
     z-index: 5;
+    transform: rotate(-90deg);
 }
 
 .drip
